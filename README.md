@@ -4,7 +4,7 @@
 Este projeto é uma simulação de uma interface de postagens do Instagram, com funcionalidades de interação, como "curtir" postagens, exibir curtidas e descrições. Ele foi desenvolvido utilizando HTML, CSS, TypeScript, Vite, UUID e a biblioteca `faker` para gerar dados aleatórios.
 
 ## 👀 Demo
-Veja a versão em ação clicando [aqui](#).
+Veja a versão em ação clicando [aqui](https://instagram-web-psi.vercel.app/).
 
 ## 🚀 Funcionalidades
 - Interface de postagem similar ao Instagram.

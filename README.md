@@ -16,7 +16,6 @@ Veja a versão em ação clicando [aqui](https://instagram-web-psi.vercel.app/).
 ## 🛠️ Tecnologias Utilizadas
 - **HTML5**
 - **CSS3** (Flexbox e Grid)
-- **JavaScript (ES6+)**
 - **TypeScript**
 - **Vite**
 - **UUID** (para gerar identificadores únicos)

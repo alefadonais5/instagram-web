@@ -28,25 +28,25 @@ class Post {
     const btnLike = postContainer?.querySelector("#btn-like");
     const icon = btnLike?.children[0];
 
-    if (!icon) return;
+    const likeCount = postContainer?.querySelector(".post-likes .like-count");
 
-    // Remove o coração preenchido e adiciona o coração vazio
+    if (!icon || !likeCount) return;
+
+    // Altera o ícone e a quantidade de curtidas
     if (this._isLiked) {
       icon.classList.remove("fa-heart");
       icon.classList.remove("liked");
       icon.classList.add("fa-heart-o");
-
-      // Incrementa o número de likes
-      this._numberOfLikes += 1;
+      this._numberOfLikes -= 1;
     } else {
-      // Remove o coração vazio e adiciona o coração preenchido
       icon.classList.remove("fa-heart-o");
       icon.classList.add("fa-heart");
       icon.classList.add("liked");
-
-      // Descrementa o número de likes
-      this._numberOfLikes -= 1;
+      this._numberOfLikes += 1;
     }
+
+    // Atualiza a quantidade de curtidas no HTML
+    likeCount.textContent = this._numberOfLikes.toString();
 
     this._isLiked = !this._isLiked;
   }
@@ -74,8 +74,8 @@ class Post {
     `;
 
     const postLikes = `<div class="post-likes">
-        <i class="fa fa-heart"></i>
-        ${this._numberOfLikes}
+    <i class="fa fa-heart"></i>
+      <span class="like-count">${this._numberOfLikes}</span>
       </div>`;
 
     const postIcons = `
